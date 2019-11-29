@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="49px" viewBox="0 0 86 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>Regular-M</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chevron.up" transform="translate(-1407.000000, -1064.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Symbols" transform="translate(512.000000, 637.000000)">
+                <g id="Regular-M" transform="translate(894.990000, 427.000000)">
+                    <path d="M1.7695,41.0527 C0.9395,41.834 0.4512,42.957 0.4512,44.2266 C0.4512,46.7656 2.3555,48.6699 4.8945,48.6699 C6.1641,48.6699 7.3359,48.2305 8.0684,47.4004 L42.8828,11.8535 L77.6484,47.4004 C78.4297,48.2305 79.6016,48.6699 80.8223,48.6699 C83.3613,48.6699 85.2656,46.7656 85.2656,44.2266 C85.2656,42.957 84.7773,41.834 83.9473,41.0527 L46.1543,2.3809 C45.3242,1.4531 44.1035,0.916 42.8828,0.916 C41.6133,0.916 40.4414,1.4531 39.5625,2.3809 L1.7695,41.0527 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

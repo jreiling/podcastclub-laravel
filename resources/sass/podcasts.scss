@@ -1,0 +1,53 @@
+
+header {
+  width:100%;
+  background: black;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.artwork {
+  width:32px;
+  height:32px;
+  border-radius: 3px;
+  margin-right: 14px;
+}
+
+.podcast-more {
+  width:12px;
+  height:20px;
+  margin-left: 14px;
+}
+
+.podcast-more.disabled {
+  opacity: 0.0;
+}
+ h3 {
+   margin-top: 0px;
+   margin-bottom: 0px;
+ }
+
+ .club-header {
+   margin-top: 20px;
+   margin-bottom: 10px;
+
+ }
+
+ .list-item {
+   display: inline-block;
+   margin-right: 10px;
+ }
+
+ .list-enter-active, .list-leave-active {
+   transition: all .5s;
+ }
+ .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+   opacity: 0;
+   transform: scale(.8);
+ }
+
+ .list-move {
+   transition: transform .5s;
+ }
