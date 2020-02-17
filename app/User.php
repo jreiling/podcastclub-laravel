@@ -17,4 +17,9 @@ class User extends Model
     {
         return $this->hasMany('App\Podcast')->orderBy('order');
     }
+
+    public function nameOrHandle()
+    {
+      return ($this->first_name == "" ) ? $this->handle : $this->first_name;
+    }
 }

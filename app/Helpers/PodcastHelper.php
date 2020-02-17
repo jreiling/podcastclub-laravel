@@ -65,7 +65,6 @@ class PodcastHelper
     $object = $consumer->loadUrl($uri);
     $description = str_replace( " on Apple Podcasts", "" , $object->title);
     $artwork = str_replace( "wp.png", ".png", $object->images[0]->url );
-
     // Get our objects in order.
     $clubs = $user->clubs()->get();
 
@@ -85,7 +84,6 @@ class PodcastHelper
 
       // Save everything.
       $user->podcasts()->save($podcast);
-      $club->podcasts()->save($podcast);
       $podcast->save();
 
     }

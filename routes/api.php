@@ -6,6 +6,7 @@ use App\User;
 use App\Podcast;
 use App\Helpers\PodcastHelper;
 use App\Helpers\ClubHelper;
+use App\Helpers\MessageHelper;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,22 +27,22 @@ Route::post('/handle-message',function(Request $request) {
   if ( !$request->has('text','handle') ) return $errorState;
 
   // Check to see if the handle exists within the users table
-  if ( User::where( 'handle' , $request->input('handle') )->count() == 0 ) return $errorState;
+  if ( User::where( 'handle' , $request->input('handle') )->count() == 0 ) return '{"success":false,"error":"User naot found"}';
 
   // Check to make sure this isn't a message sent to a group.
-  if ( !$request->input('group') == null ) return $errorState;
+  if ( !$request->input('group') == null ) return '{"success":false,"error":"No group messages"}';
 
   // Check to make sure this isn't a message sent by the system.
   if ( $request->input('fromMe') ) return $errorState;
 
   // Check to make sure it's just a link.
   $podcastValidator = '/(https:\/\/podcasts.apple.com\/us\/podcast\/)(.*?)?i=[0-9]*$/';
-  if ( !preg_match($podcastValidator, $request->input('text'))) return $errorState;
+  if ( !preg_match($podcastValidator, $request->input('text'))) return '{"success":false,"error":"Not a valid podcast"}';
 
   // We made it! Now let's add the podcast.
   $user = User::where( 'handle' , $request->input('handle') )->first();
   PodcastHelper::addPodcastForUser($user,$request->input('text'));
-
+  MessageHelper::sendPodcastRecievedMessage($user);
   return $successState;
 
 });
