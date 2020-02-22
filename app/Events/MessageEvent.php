@@ -22,7 +22,7 @@ class MessageEvent implements ShouldBroadcast
      */
     public function __construct($handle,$message)
     {
-        echo 'Send ! "'.$message.'" to '.$handle;
+        //echo 'Send ! "'.$message.'" to '.$handle;
         $this->handle = $handle;
         $this->text = $message;
     }

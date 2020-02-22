@@ -47,7 +47,26 @@ class Kernel extends ConsoleKernel
           }
 
 //            DB::table('recent_users')->delete();
-        })->dailyAt('13:00');
+        })->weeklyOn(0, '19:00');
+
+        $schedule->call(function () {
+
+          $clubs = Club::all();
+
+          foreach ($clubs as $club) {
+
+            // Get the next podcast for that club.
+            $podcast = PodcastHelper::getNextPodcastForClub($club->id);
+
+            if ($podcast) {
+              MessageHelper::sendPodcastToClub($club,$podcast);
+              PodcastHelper::successfullySentPodcast($podcast);
+            }
+          }
+
+//            DB::table('recent_users')->delete();
+        })->weeklyOn(4, '19:00');
+
 
     }
 
