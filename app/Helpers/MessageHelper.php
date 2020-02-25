@@ -41,7 +41,7 @@ class MessageHelper
     $confirmationMessage[] = "👌";
     $confirmationMessage[] = "🔥🔥🔥";
     $confirmationMessage[] = "Oh, I ❤️ that one.";
-    $confirmationMessage[] = "🤖 Bleep blorp. Podcast recieved.⚡️⚡️⚡️";
+    $confirmationMessage[] = "🤖 Bleep blorp. Podcast received.⚡️⚡️⚡️";
     $confirmationMessage[] = "Proof you have excellent taste. 💅";
 
     $key = array_rand($confirmationMessage,1);
